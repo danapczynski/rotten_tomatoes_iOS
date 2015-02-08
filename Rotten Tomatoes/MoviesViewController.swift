@@ -11,6 +11,7 @@ import UIKit
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var errorView: UIView!
     
     var movies: [NSDictionary]! = []
     
@@ -26,11 +27,17 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         SVProgressHUD.show()
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
-            var responseDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as NSDictionary
-            
-            self.movies = responseDictionary["movies"] as [NSDictionary]
-            self.tableView.reloadData()
-            
+
+            let httpResponse = response as NSHTTPURLResponse
+
+            if (httpResponse.statusCode != 200) {
+                self.errorView.hidden = false
+            } else {
+                var responseDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as NSDictionary
+                
+                self.movies = responseDictionary["movies"] as [NSDictionary]
+                self.tableView.reloadData()
+            }
             SVProgressHUD.dismiss()
         })
     }
