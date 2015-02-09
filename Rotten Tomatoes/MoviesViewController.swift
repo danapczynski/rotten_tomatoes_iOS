@@ -18,7 +18,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: "onRefresh", forControlEvents: UIControlEvents.ValueChanged)
         tableView.insertSubview(refreshControl, atIndex: 0)
@@ -33,15 +33,19 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         SVProgressHUD.show()
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
 
-            let httpResponse = response as NSHTTPURLResponse
-
-            if (httpResponse.statusCode != 200) {
+            if (error != nil) {
                 self.errorView.hidden = false
             } else {
-                var responseDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as NSDictionary
-                
-                self.movies = responseDictionary["movies"] as [NSDictionary]
-                self.tableView.reloadData()
+                let httpResponse = response as NSHTTPURLResponse
+
+                if (httpResponse.statusCode != 200) {
+                    self.errorView.hidden = false
+                } else {
+                    var responseDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as NSDictionary
+                    
+                    self.movies = responseDictionary["movies"] as [NSDictionary]
+                    self.tableView.reloadData()
+                }
             }
             SVProgressHUD.dismiss()
         })
@@ -67,8 +71,14 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         cell.synopsisLabel.text = movie["synopsis"] as? String
         cell.posterView.setImageWithURL(NSURL(string: posterUrl))
         cell.scoreLabel.text =  "\(score)%"
+        cell.tomatoView.image = UIImage(named: tomato(score))
         
         return cell
+    }
+    
+    func tomato(score: Int) -> String {
+        if score > 59 { return "fresh.png" }
+        else { return "rotten.png" }
     }
 
     func delay(delay:Double, closure:()->()) {
@@ -81,6 +91,9 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     }
 
     func onRefresh() {
+        self.errorView.hidden = true
+        self.viewDidLoad()
+        
         delay(2, closure: {
             self.refreshControl.endRefreshing()
         })

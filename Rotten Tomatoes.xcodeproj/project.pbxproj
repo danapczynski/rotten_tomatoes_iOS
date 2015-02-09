@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47A15D591A8823B3006837DC /* up_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 47A15D581A8823B3006837DC /* up_arrow.png */; };
+		47A15D5C1A882E33006837DC /* fresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 47A15D5A1A882E33006837DC /* fresh.png */; };
+		47A15D5D1A882E33006837DC /* rotten.png in Resources */ = {isa = PBXBuildFile; fileRef = 47A15D5B1A882E33006837DC /* rotten.png */; };
 		47F3880C1A81D56F00E9ED7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3880B1A81D56F00E9ED7A /* AppDelegate.swift */; };
 		47F388111A81D56F00E9ED7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47F3880F1A81D56F00E9ED7A /* Main.storyboard */; };
 		47F388131A81D56F00E9ED7A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47F388121A81D56F00E9ED7A /* Images.xcassets */; };
@@ -29,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		47A15D581A8823B3006837DC /* up_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = up_arrow.png; path = ../../../../Downloads/up_arrow.png; sourceTree = "<group>"; };
+		47A15D5A1A882E33006837DC /* fresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fresh.png; path = ../../../../Downloads/fresh.png; sourceTree = "<group>"; };
+		47A15D5B1A882E33006837DC /* rotten.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rotten.png; path = ../../../../Downloads/rotten.png; sourceTree = "<group>"; };
 		47F388061A81D56F00E9ED7A /* Rotten Tomatoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rotten Tomatoes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F3880A1A81D56F00E9ED7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47F3880B1A81D56F00E9ED7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +108,9 @@
 				47F3880B1A81D56F00E9ED7A /* AppDelegate.swift */,
 				47F3882B1A81D85800E9ED7A /* MoviesViewController.swift */,
 				47F3880F1A81D56F00E9ED7A /* Main.storyboard */,
+				47A15D5A1A882E33006837DC /* fresh.png */,
+				47A15D5B1A882E33006837DC /* rotten.png */,
+				47A15D581A8823B3006837DC /* up_arrow.png */,
 				47F3882D1A81F57C00E9ED7A /* MovieCell.swift */,
 				47F388121A81D56F00E9ED7A /* Images.xcassets */,
 				47F388091A81D56F00E9ED7A /* Supporting Files */,
@@ -228,7 +237,10 @@
 			files = (
 				47F388111A81D56F00E9ED7A /* Main.storyboard in Resources */,
 				47F388161A81D56F00E9ED7A /* LaunchScreen.xib in Resources */,
+				47A15D5C1A882E33006837DC /* fresh.png in Resources */,
+				47A15D591A8823B3006837DC /* up_arrow.png in Resources */,
 				47F388131A81D56F00E9ED7A /* Images.xcassets in Resources */,
+				47A15D5D1A882E33006837DC /* rotten.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

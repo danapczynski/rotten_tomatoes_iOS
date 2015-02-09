@@ -26,6 +26,19 @@
                                                 <view contentMode="scaleToFill" id="yei-ti-eYo">
                                                     <rect key="frame" x="0.0" y="0.5" width="74" height="121.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="txE-aS-49h">
+                                                            <rect key="frame" x="27" y="89" width="41" height="27.5"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="DiF-6Q-qdM">
+                                                            <rect key="frame" x="8" y="95" width="16" height="16"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                    </subviews>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" id="Xsl-Tp-mHk">
@@ -51,13 +64,6 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="txE-aS-49h">
-                                                    <rect key="frame" x="6" y="92" width="61" height="27.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -66,6 +72,7 @@
                                             <outlet property="scoreLabel" destination="txE-aS-49h" id="NUq-aA-how"/>
                                             <outlet property="synopsisLabel" destination="32g-bx-mLX" id="zb6-m2-veC"/>
                                             <outlet property="titleLabel" destination="uIs-OQ-mBu" id="h4n-8d-8HU"/>
+                                            <outlet property="tomatoView" destination="DiF-6Q-qdM" id="EIj-CG-PRE"/>
                                             <segue destination="lIj-Q4-Ptc" kind="push" id="wbl-Ik-0ye"/>
                                         </connections>
                                     </tableViewCell>
@@ -115,25 +122,54 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view opaque="NO" contentMode="scaleToFill" id="kjA-3U-XU8">
-                                        <rect key="frame" x="0.0" y="537" width="320" height="80"/>
+                                        <rect key="frame" x="0.0" y="463" width="320" height="182"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't mess with Axel Foley, brah" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vTw-es-SHg">
-                                                <rect key="frame" x="8" y="44" width="304" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEARN MORE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zKi-ww-d4b">
-                                                <rect key="frame" x="8" y="5" width="304" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beverly Hills Cop" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zKi-ww-d4b">
+                                                <rect key="frame" x="8" y="31" width="304" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Critics Score: 100%" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xs7-aH-pJR">
+                                                <rect key="frame" x="29" y="58" width="122" height="19"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starring:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Akv-Ac-r3L">
+                                                <rect key="frame" x="8" y="77" width="62" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eddie Murphy, Judge Reinhold" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AhN-ws-1y3">
+                                                <rect key="frame" x="72" y="78" width="240" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't mess with Axel Foley, brah" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vTw-es-SHg">
+                                                <rect key="frame" x="8" y="112" width="304" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="g4c-GB-Xh5">
+                                                <rect key="frame" x="148" y="8" width="24" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="KI8-8J-P1F">
+                                                <rect key="frame" x="8" y="60" width="16" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.24696180555555558" green="0.24696180555555558" blue="0.24696180555555558" alpha="0.76000000000000001" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.24696180555555558" green="0.24696180555555558" blue="0.24696180555555558" alpha="0.93000000000000005" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
                                 <connections>
@@ -149,8 +185,13 @@
                     <connections>
                         <outlet property="movieDetailsScrollView" destination="vel-BZ-YS8" id="tSY-TV-ccY"/>
                         <outlet property="moviePoster" destination="5lt-fK-qRZ" id="HuT-CN-umx"/>
+                        <outlet property="movieScore" destination="xs7-aH-pJR" id="tid-jT-ZqS"/>
+                        <outlet property="movieStars" destination="AhN-ws-1y3" id="gi1-ad-fNA"/>
                         <outlet property="movieSynopsis" destination="vTw-es-SHg" id="XBw-1O-Pl2"/>
+                        <outlet property="movieTitle" destination="zKi-ww-d4b" id="GfR-ID-yM0"/>
+                        <outlet property="movieTomato" destination="KI8-8J-P1F" id="K9f-gb-pSB"/>
                         <outlet property="synopsisBackdrop" destination="kjA-3U-XU8" id="VYA-EE-2aq"/>
+                        <outlet property="upArrow" destination="g4c-GB-Xh5" id="Y8z-0y-iK8"/>
                         <outlet property="view" destination="3zv-gr-NHI" id="8Tr-q2-Lml"/>
                     </connections>
                 </viewController>
